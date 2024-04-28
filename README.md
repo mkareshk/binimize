@@ -80,7 +80,7 @@ The output will be a Pandas DataFrame with each row representing a binary combin
 ```
    x_1  x_2  value
 0    0    0      0
-1    0    1      2
+1    0    1      1
 2    1    0      1
 3    1    1      6
 ```
@@ -92,8 +92,6 @@ To run tests:
 ```bash
 pytest tests/
 ```
-
-Ensure that you have pytest installed and that your tests are located in the `tests/` directory.
 
 ## Contributing
 
