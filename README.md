@@ -1,12 +1,10 @@
 # binimize: A Python Library for QUBO Problems
 
-binimize is a Python library designed to solve Quadratic Unconstrained Binary Optimization (QUBO) problems efficiently using parallel computation on both CPU and GPU. It provides a flexible approach to handle these problems using either NumPy or PyTorch, making it suitable for a variety of computational environments.
-
-## Badges
-
-![Build Status](https://github.com/yourusername/binimize/actions/workflows/python-package.yml/badge.svg)
+![Build Status](https://github.com/mkareshk/binimize/actions/workflows/python-tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)
+
+binimize is a Python library designed to solve Quadratic Unconstrained Binary Optimization (QUBO) problems efficiently using parallel computation on both CPU and GPU. It provides a flexible approach to handle these problems using either NumPy or PyTorch, making it suitable for a variety of computational environments.
 
 ## Installation
 
