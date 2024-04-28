@@ -11,7 +11,7 @@ class QuboTorch:
         self.device: TorchDevice = torch.device(
             "cuda" if device == "cuda" and torch.cuda.is_available() else "cpu"
         )
-        Q = Q.to(self.device)
+        Q = Q.to(dtype=torch.float32, device=self.device)
         if not self._is_valid_Q(Q):
             raise ValueError("Provided matrix Q is not valid for a QUBO problem.")
         self.Q: Tensor = Q
@@ -29,7 +29,9 @@ class QuboTorch:
 
     def objective_value(self, x: Tensor) -> Tensor:
         """Calculate the objective value for a given binary vector x."""
-        x = x.to(self.device)  # Ensure x is on the same device as Q
+        x = x.to(
+            dtype=self.Q.dtype, device=self.device
+        )  # Ensure x is on the same device as Q
         if len(x) != self.Q.shape[0]:
             raise ValueError("Binary vector x and Q must have the same size.")
         return torch.dot(x, torch.matmul(self.Q, x))
