@@ -20,6 +20,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=["numpy", "torch", "pandas", "joblib"],
-    extras_require={"dev": ["pre-commit", "pytest", "pytest-runner"]},
+    extras_require={"dev": ["pre-commit", "pytest", "pytest-runner", "pytest-cov"]},
     python_requires=">=3.10",
 )
