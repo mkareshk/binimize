@@ -19,7 +19,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["numpy", "torch", "pandas", "joblib"],
+    install_requires=["numpy", "torch", "pandas", "joblib", "pygad"],
     extras_require={"dev": ["pre-commit", "pytest", "pytest-runner", "pytest-cov"]},
     python_requires=">=3.10",
 )
